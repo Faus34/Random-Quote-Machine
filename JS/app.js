@@ -41,8 +41,13 @@ function getRandomQuote(){
   $('#tumblr-quote').attr(
     'href', tumblrURL
   );
-
-  $('#card-img').attr('src','https://source.unsplash.com/random/300x150'+new Date().getTime())
+  if ($(window).width()>500){
+    $('#card-img').show();
+    $('#card-img').attr('src','https://source.unsplash.com/random/300x150'+new Date().getTime())
+  } else {
+    $('#card-img').hide();
+  }
+  
 };
 
 function setQuote(quote,author){
@@ -52,6 +57,7 @@ function setQuote(quote,author){
 
 $(document).ready(function(){
   getQuotes().then(()=>{
+    $('#card-img').hide();
     getRandomQuote();
   });
   
