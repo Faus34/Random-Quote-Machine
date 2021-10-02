@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="CSS\styles.css"> 
+    <title>Random Awesome Quote Generator</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="quote-box" class="container-fluid card w-50 text-center text-white bg-dark">
+            <img class="card-img-top mt-2" id="card-img" src="https://source.unsplash.com/random/300x150" alt="Card image cap">
+            <div class="card-body">
+                <div id="quote-text">
+                    <h3 id="text"><i class="fa fa-quote-left"></i> <span id="textSpace"></span> </h3>
+                </div>
+                <div id="quote-author">
+                    -<span id="author" class="card-subtitle mb-2 text-white"> </span>
+                </div>
+                <div class="row justify-content-center align-items-center mt-2">
+                    <div class="col-xs-4 m-1">
+                        <a href="_top" id="tweet-quote" title="tweet this quote!" class="btn btn-danger btn-block"
+                        target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 m-1">
+                        <a href="_top" id="tumblr-quote" title="post this on tumbler!" class="btn btn-danger btn-block"
+                        target="_blank">
+                            <i class="fa fa-tumblr"></i>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 m-1 ">
+                        <button id="new-quote" class="btn btn-primary btn-block">New quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="JS\app.js"></script>
+    </div>
+</body>
+</html>
