@@ -1,5 +1,9 @@
 let quotesData;
 
+let colors = [
+'#6b5b95','#feb236','#d64161','#ff7b25','#d5f4e6','#80ced6','#fefbd8','#618685','#92a8d1','#f7cac9','#f7786b','#82b74b','#ffcc5c'
+];
+
 function getQuotes() {
   return $.ajax({
     headers: {
@@ -28,6 +32,8 @@ function getRandomQuote(){
   
   const tumblrURL = 'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption='+ encodeURIComponent(author)+'&content='+encodeURIComponent(quote)+'&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button';
   
+  $('body').css('background',colors[Math.floor(Math.random() * colors.length)])
+
   $('#tweet-quote').attr(
     'href', twitterURL
   );
@@ -35,6 +41,8 @@ function getRandomQuote(){
   $('#tumblr-quote').attr(
     'href', tumblrURL
   );
+
+  $('#card-img').attr('src','https://source.unsplash.com/random/300x150'+new Date().getTime())
 };
 
 function setQuote(quote,author){
